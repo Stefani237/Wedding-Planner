@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dialog_btn"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="My Wedding"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <EditText
+            android:id="@+id/wedding_details_groom_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:inputType="textCapWords"
+            android:ems="10"
+            android:hint="Groom's Name" />
+
+        <EditText
+            android:id="@+id/wedding_details_bride_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:ems="10"
+            android:hint="Bride's Name" />
+
+        <EditText
+            android:id="@+id/wedding_details_wed_hall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Wedding Hall"
+            android:inputType="textCapWords"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="193dp" />
+
+        <EditText
+            android:id="@+id/wedding_details_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="textCapWords"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="264dp" />
+
+        <EditText
+            android:id="@+id/wedding_details_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Date"
+            android:inputType="date"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="342dp" />
+
+        <EditText
+            android:id="@+id/wedding_details_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Time"
+            android:inputType="time"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="342dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:text="Cancel"
+            android:layout_weight="1"
+            android:id="@+id/wedding_details_negative_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:text="Ok"
+            android:id="@+id/wedding_details_positive_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.stefani.weddingplanner.GuestsListActivity">
+
+    <ListView
+        android:layout_above="@+id/bottom_btns"
+        android:id="@+id/guestsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <LinearLayout
+        android:weightSum="2"
+        android:id="@+id/bottom_btns"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/addGuest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="20dp"
+        android:text="+"
+        android:backgroundTint="#7989ee"
+        android:textColor="#ffffff"
+        android:textSize="15dp" />
+
+    <Button
+        android:layout_weight="1"
+        android:textSize="15dp"
+        android:id="@+id/send_sms_btn"
+        android:layout_alignParentBottom="true"
+        android:text="Send SMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Wedding Planner</string>
+    <string name="wedding_details"><u>Edit Wedding Details</u></string>
+
+    <string-array name="belong_group">
+        <item>Friends</item>
+        <item>Close family</item>
+        <item>Extended family</item>
+        <item>Friends of the parents</item>
+    </string-array>
+
+</resources>
