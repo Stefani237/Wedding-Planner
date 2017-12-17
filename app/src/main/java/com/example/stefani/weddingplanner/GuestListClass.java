@@ -26,11 +26,4 @@ public class GuestListClass {
         mArrGuest.add(guest);
     }
 
-    public static void removeGuest(int idx){
-        Log.e("idx = " + idx, "------------------");
-        Log.e("array size = " + mArrGuest.size(), "------------------");
-        if(!mArrGuest.isEmpty()) {
-            mArrGuest.remove(idx);
-        }
-    }
 }

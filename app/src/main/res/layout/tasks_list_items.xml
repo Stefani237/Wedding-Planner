@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="55dip">
+
+    <TextView
+        android:id="@+id/task_name"
+        android:text="Task name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+    <CheckBox
+        android:id="@+id/task_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/darkBlue"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>

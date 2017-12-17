@@ -2,11 +2,23 @@
     <string name="app_name">Wedding Planner</string>
     <string name="wedding_details"><u>Edit Wedding Details</u></string>
 
-    <string-array name="belong_group">
+    <string-array name="belong_group_arr">
         <item>Friends</item>
         <item>Close family</item>
         <item>Extended family</item>
         <item>Friends of the parents</item>
+    </string-array>
+
+    <string-array name="task_sort_arr">
+        <item>All tasks</item>
+        <item>Completed tasks</item>
+        <item>Uncompleted tasks</item>
+    </string-array>
+
+    <string-array name="guest_sort_arr">
+        <item>All guests</item>
+        <item>Guests that confirmed arrival</item>
+        <item>Guests that not confirmed arrival</item>
     </string-array>
 
 </resources>

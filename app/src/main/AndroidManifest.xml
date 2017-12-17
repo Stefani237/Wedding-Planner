@@ -2,10 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.stefani.weddingplanner">
 
-    <uses-permission android:name="android.permission.WRITE_SMS"/>
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-    <uses-feature android:name="android:hardware.telephony" android:required="true"/>
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".WeddingPlanner"
@@ -15,8 +21,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-         >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,14 +30,17 @@
         </activity>
         <activity android:name=".GuestsListActivity" />
         <activity android:name=".NewGuestActivity" />
-        <activity android:name=".RSVPsActivity"/>
+        <activity android:name=".TasksListActivity" />
 
-        <receiver android:name=".SmsReceiver">
-            <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVER"/>
+        <receiver
+            android:name=".SmsReceiver"
+            android:exported="true">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
+        <activity android:name=".NewTaskActivity"></activity>
     </application>
 
 </manifest>

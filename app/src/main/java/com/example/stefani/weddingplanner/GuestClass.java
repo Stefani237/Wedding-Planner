@@ -8,19 +8,29 @@ public class GuestClass {
     private String mID;
     private String mFullName;
     private String mPhone;
-    private int mNumOfInvited;
-    private boolean mIsComing;
+    private int mNumOfGuest = 1;
+    private boolean mIsComing = false;
     private String mSide;
     private String mBelongingGroup;
 
-    public GuestClass(String id, String fullName, String phone, int mNumOfInvited, String side, String belongingGroup) {
+    public GuestClass(String id, String fullName, String phone, int mNumOfGuest, String side, String belongingGroup) {
         this.mID = id;
         this.mFullName = fullName;
         this.mPhone = phone;
-        this.mNumOfInvited = mNumOfInvited;
+        this.mNumOfGuest = mNumOfGuest;
         this.mIsComing = false;
         this.mSide = side;
         this.mBelongingGroup = belongingGroup;
+    }
+
+    public GuestClass(){}
+
+    public String getmID() {
+        return mID;
+    }
+
+    public void setmID(String mID) {
+        this.mID = mID;
     }
 
     public String getmFullName() {
@@ -39,12 +49,12 @@ public class GuestClass {
         this.mPhone = mPhone;
     }
 
-    public int getmNumOfInvited() {
-        return mNumOfInvited;
+    public int getmNumOfGuest() {
+        return mNumOfGuest;
     }
 
-    public void setmNumOfInvited(int mNumOfInvited) {
-        this.mNumOfInvited = mNumOfInvited;
+    public void setmNumOfGuest(int mNumOfGuest) {
+        this.mNumOfGuest = mNumOfGuest;
     }
 
     public boolean ismIsComing() {
@@ -71,12 +81,4 @@ public class GuestClass {
         this.mBelongingGroup = mBelongingGroup;
     }
 
-
-    public String getmID() {
-        return mID;
-    }
-
-    public void setmID(String mID) {
-        this.mID = mID;
-    }
 }

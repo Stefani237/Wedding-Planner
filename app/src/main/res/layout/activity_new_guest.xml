@@ -20,6 +20,7 @@
         android:id="@+id/fullNameField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
         android:layout_marginTop="65dp"
         android:ems="10"
         android:hint="Full Name"
@@ -29,6 +30,7 @@
         android:id="@+id/phoneNumberField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
         android:layout_marginTop="110dp"
         android:ems="10"
         android:hint="Phone Number"
@@ -38,6 +40,7 @@
         android:id="@+id/NumOfInvitedField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
         android:layout_marginTop="155dp"
         android:ems="10"
         android:hint="Number Of Invited"
@@ -58,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="230dp"
         android:orientation="horizontal"
-        android:ems="10"
+        android:weightSum="3"
         android:hint="Which Side">
 
         <RadioButton
@@ -66,6 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:buttonTint="@color/darkBlue"
             android:onClick="getSelectedRadioButton"
             android:text="Bride"/>
 
@@ -74,6 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:buttonTint="@color/darkBlue"
             android:onClick="getSelectedRadioButton"
             android:text="Groom" />
 
@@ -82,6 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:buttonTint="@color/darkBlue"
             android:onClick="getSelectedRadioButton"
             android:text="Both" />
 
@@ -115,7 +121,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/dialog_btn"
+        android:id="@+id/new_guest_btn"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -124,20 +130,24 @@
 
         <Button
             android:layout_weight="1"
-            android:id="@+id/cancelDB"
+            android:id="@+id/cancelGuestDB"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
             android:layout_marginTop="300dp"
             android:text="CANCEL" />
 
 
         <Button
             android:layout_weight="1"
-            android:id="@+id/addToDB"
+            android:id="@+id/addToGuestDB"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
             android:layout_marginTop="300dp"
             android:text="ADD GUEST" />
 

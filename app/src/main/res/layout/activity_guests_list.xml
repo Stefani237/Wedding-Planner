@@ -6,11 +6,26 @@
     android:layout_height="match_parent"
     tools:context="com.example.stefani.weddingplanner.GuestsListActivity">
 
+    <TextView
+        android:id="@+id/sms_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="This is msg : "/>
+
+    <Spinner
+        android:id="@+id/guest_sort"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <ListView
+        android:layout_below="@+id/sms_message"
         android:layout_above="@+id/bottom_btns"
         android:id="@+id/guestsListView"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="400dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp" />
 
@@ -22,26 +37,26 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <Button
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:id="@+id/send_sms_btn"
+            android:layout_alignParentBottom="true"
+            android:text="Send SMS"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
     <Button
         android:layout_weight="1"
         android:id="@+id/addGuest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="19dp"
-        android:layout_marginEnd="20dp"
-        android:text="+"
-        android:backgroundTint="#7989ee"
-        android:textColor="#ffffff"
+        android:text="ADD NEW GUEST"
+        android:backgroundTint="@color/lightBlue"
+        android:textColor="@color/white"
         android:textSize="15dp" />
-
-    <Button
-        android:layout_weight="1"
-        android:textSize="15dp"
-        android:id="@+id/send_sms_btn"
-        android:layout_alignParentBottom="true"
-        android:text="Send SMS"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -14,10 +14,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String SHARED_PREFS = "SHARED_PREF";
-
     private Button mGuestsBtn;
-    private Button mRSVPsBtn;
+    private Button mTasksBtn;
     private TextView mHeadline;
     private SharedPreferences mSharedPreferencesFile;
     private WeddingDetailsClass mWeddingDetails;
@@ -27,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mSharedPreferencesFile = getBaseContext().getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+        mSharedPreferencesFile = getBaseContext().getSharedPreferences(Constants.SHARED_PREFS, Context.MODE_PRIVATE);
 
         getWeddingDetailsFromPref();
 
@@ -45,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         mGuestsBtn = (Button) findViewById(R.id.guests_btn);
         startGuestsListActivity();
 
-        mRSVPsBtn = (Button) findViewById(R.id.rsvps_btn);
-        startRSVPsActivity();
+        mTasksBtn = (Button) findViewById(R.id.tasks_btn);
+        startTasksActivity();
     }
 
     public void startGuestsListActivity(){
@@ -59,12 +57,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void startRSVPsActivity()
+    public void startTasksActivity()
     {
-        mRSVPsBtn.setOnClickListener(new View.OnClickListener(){
+        mTasksBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, RSVPsActivity.class);
+                Intent intent = new Intent(MainActivity.this, TasksListActivity.class);
                 startActivity(intent);
             }
         });
@@ -137,6 +135,13 @@ public class MainActivity extends AppCompatActivity {
         final EditText wedding_details_time = (EditText) promptsView.findViewById(R.id.wedding_details_time);
         wedding_details_time.setText(mWeddingDetails.getmTime());
 
+        messageFields[0] = mWeddingDetails.getmGroomName();
+        messageFields[1] = mWeddingDetails.getmBrideName();
+        messageFields[2] = mWeddingDetails.getmWeddingHall();
+        messageFields[3] = mWeddingDetails.getmAddress();
+        messageFields[4] = mWeddingDetails.getmDate();
+        messageFields[5] = mWeddingDetails.getmTime();
+        creatingInvitationMessage( messageFields);
 
         Button wedding_details_negative_btn = (Button)promptsView.findViewById(R.id.wedding_details_negative_btn);
         wedding_details_negative_btn.setOnClickListener(new View.OnClickListener() {
@@ -169,8 +174,17 @@ public class MainActivity extends AppCompatActivity {
 
                 String str_Wedding_details_time = wedding_details_time.getText().toString();
                 editor.putString("Time", str_Wedding_details_time);
-
                 editor.apply();
+
+                messageFields[0] = str_Wedding_details_groom_name;
+                messageFields[1] = str_Wedding_details_bride_name;
+                messageFields[2] = str_Wedding_details_wed_hall;
+                messageFields[3] = str_Wedding_details_address;
+                messageFields[4] = str_Wedding_details_date;
+                messageFields[5] = str_Wedding_details_time;
+
+                creatingInvitationMessage( messageFields);
+
 
                 dialog.dismiss();
             }
@@ -199,6 +213,18 @@ public class MainActivity extends AppCompatActivity {
         });*/
 
         dialog.show();
+    }
+
+    private String[] messageFields = new String[6];
+    private void creatingInvitationMessage(String[] messageFields){
+        String smsMessage = "Hello, You were invited to " + messageFields[1] + " and " + messageFields[0] + "'s " +
+                "wedding.\n The wedding will take place on " + messageFields[4] + " at " + messageFields[5] + " at the "+
+                messageFields[2] + ". To confirm your arrival, please text back the number of people to arrive. 0 if you do not arrive.";
+
+
+        SharedPreferences.Editor editor = mSharedPreferencesFile.edit();
+        editor.putString(Constants.SMS_MESSAGE, smsMessage);
+        editor.apply();
     }
 
 }
