@@ -1,24 +1,48 @@
 <resources>
     <string name="app_name">Wedding Planner</string>
     <string name="wedding_details"><u>Edit Wedding Details</u></string>
+    <string name="wedding_status"><u>Wedding Status</u></string>
 
-    <string-array name="belong_group_arr">
-        <item>Friends</item>
-        <item>Close family</item>
-        <item>Extended family</item>
-        <item>Friends of the parents</item>
-    </string-array>
+    <string name="str_congratulations">Congratulations!</string>
 
-    <string-array name="task_sort_arr">
-        <item>All tasks</item>
-        <item>Completed tasks</item>
-        <item>Uncompleted tasks</item>
-    </string-array>
 
-    <string-array name="guest_sort_arr">
-        <item>All guests</item>
-        <item>Guests that confirmed arrival</item>
-        <item>Guests that not confirmed arrival</item>
-    </string-array>
+    <string name="str_">Are you sure you want to delete the guest from the invite list?</string>
+    <string name="str_delete_msg_task">Are you sure you want to delete the task from the list?</string>
+    <string name="str_delete_msg_supplier">Are you sure you want to delete the supplier from the list?</string>
+    <string name="str_delete_title">Confirm delete</string>
+    <string name="str_delete_positive">Delete</string>
+    <string name="str_delete_negative">Cancel</string>
+
+
+    <string name="str_info">Info</string>
+    <string name="str_info_msg">The Pekan Garden can accommodate up to 672 guests.
+        \nYou can change the number of seats at each table to 10 or 12 as you wish, or have a long table of 24 seats (up to 4 such tables in the hall), which consist of two combined tables.</string>
+    <string name="str_delete_msg_guest">Are you sure you want to delete the guest from the invite list?</string>
+    <string name="fill_wedding_details">Please fill out the wedding details before sending confirmation messages.</string>
+    <string name="str_error">Error</string>
+    <string name="str_ok">OK</string>
+    <string name="str_sms_succeed">SMS successfully sent.</string>
+    <string name="guests_list_empty">Guests list is empty. Please add guests before sending SMS.</string>
+    <string name="str_sms_failed">The message not sent.</string>
+    <string name="str_added_guest">The guest was successfully added.</string>
+    <string name="str_added_task">The task was successfully added.</string>
+    <string name="str_added_supplier">The supplier was successfully added.</string>
+    <string name="str_changes_saved">Changes saved</string>
+    <string name="str_no_access_to_contacts">Could not access contact list.</string>
+    <string name="reset_seating_arrangement">Changes have been made. Seating arrangement is reset.</string>
+    <string name="max_long_tables">Can not open long tables any more.</string>
+    <string name="too_many_coming_guests">The list of guests who approved their arrival contains more then 672 guests.</string>
+    <string name="empty_coming_guests">The list of guests who approved their arrival is empty.</string>
+    <string name="not_enough_seats">The hall is not suitable for the required seating arrangement.</string>
+    <string name="title_activity_welcome_fragment">WelcomeFragment</string>
+    <string name="action_settings">Settings</string>
+    <string name="permission">Permission necessary</string>
+    <string name="external_storage_permission">External storage permission is necessary</string>
+    <string name="add_photo_title">Add Photo!</string>
+    <string name="take_photo">Take photo</string>
+    <string name="choose_from_gallery">Choose from gallery</string>
+    <string name="photo_cancel">Cancel</string>
+    <string name="edit_mode">Saving is only possible in edit mode</string>
+    <string name="empty_list">Guest list is empty</string>
 
 </resources>

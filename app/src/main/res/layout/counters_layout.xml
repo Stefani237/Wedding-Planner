@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/DP10"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/guestsImageView"
+        android:layout_width="@dimen/DP100"
+        android:layout_height="@dimen/DP100"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/guests"/>
+
+    <LinearLayout
+        android:id="@+id/guest_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Coming Guests: "/>
+        <TextView
+            android:id="@+id/coming_guest_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="0"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text=" / "/>
+        <TextView
+            android:id="@+id/total_guest_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="0"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/TaskImageView"
+        android:layout_width="@dimen/DP100"
+        android:layout_height="@dimen/DP100"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/DP50"
+        app:srcCompat="@drawable/tasks"/>
+
+    <LinearLayout
+        android:id="@+id/tasks_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/DP10"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Completed Tasks: "/>
+        <TextView
+            android:id="@+id/done_tasks_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="0"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text=" / "/>
+        <TextView
+            android:id="@+id/total_tasks_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="0"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/budgetImageView"
+        android:layout_width="@dimen/DP100"
+        android:layout_height="@dimen/DP100"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/DP50"
+        app:srcCompat="@drawable/budget"/>
+
+    <LinearLayout
+        android:id="@+id/budgeet_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/DP10"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Budget: "/>
+        <TextView
+            android:id="@+id/expenses_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="0"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text=" / "/>
+        <TextView
+            android:id="@+id/total_budget_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="0"/>
+    </LinearLayout>
+
+    <Button
+        android:text="Ok"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/wedding_counters_positive_btn"
+        android:backgroundTint="@color/lightBlue"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+
+    <TextView
+        android:id="@+id/new_supplier"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/darkBlue"
+        android:text="Add New Supplier"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/DP10"
+        android:textSize="@dimen/DP30" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/DP10"
+        android:layout_marginLeft="@dimen/DP10"
+        android:layout_marginTop="@dimen/DP66">
+
+        <EditText
+            android:id="@+id/supplier_company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/darkBlue"
+            android:ems="10"
+            android:hint="Company name"
+            android:inputType="textCapSentences"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz0123456789"/>
+
+        <EditText
+            android:id="@+id/supplier_contact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/darkBlue"
+            android:ems="10"
+            android:inputType="textCapWords"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+            android:hint="Contact name (optional)" />
+
+        <EditText
+            android:id="@+id/supplier_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/darkBlue"
+            android:hint="Phone (optional)"
+            android:digits="0123456789"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/supplier_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/darkBlue"
+            android:ems="10"
+            android:inputType="textCapWords"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz,0123456789"
+            android:hint="Address (optional)" />
+
+        <EditText
+            android:id="@+id/supplier_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/darkBlue"
+            android:ems="10"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:hint="Price"/>
+
+
+        <EditText
+            android:id="@+id/supplier_remarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/darkBlue"
+            android:ems="10"
+            android:inputType="textCapSentences|textMultiLine"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz0123456789.,"
+            android:hint="Remarks (optional)"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group_paid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:hint="Which Side">
+            <RadioButton
+                android:id="@+id/radio_btn_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/darkBlue"
+                android:text="Paid"/>
+            <RadioButton
+                android:id="@+id/radio_btn_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:buttonTint="@color/darkBlue"
+                android:text="Not Paid" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/addImageSupplier"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/DP100"
+            android:layout_height="@dimen/DP100">
+
+            <ImageView
+                android:id="@+id/supplier_image"
+                android:layout_width="@dimen/DP100"
+                android:layout_height="@dimen/DP100"
+                android:background="@drawable/placeholder_image" />
+
+            <ImageView
+                android:layout_width="@dimen/DP30"
+                android:layout_height="@dimen/DP30"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/camera_icon" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/new_task_empty_fields"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/DP20"
+        android:layout_marginTop="@dimen/DP10"
+        android:textColor="@color/red"
+        android:layout_below="@+id/linear"
+        android:text="Please fill in the required fields." />
+
+    <Button
+        android:id="@+id/supplier_addDB"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightBlue"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/DP300"
+        android:text="ADD Supplier" />
+
+
+    <!-- <LinearLayout
+         android:id="@+id/new_tasks_btn"
+         android:layout_alignParentBottom="true"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:weightSum="2">
+
+         <Button
+             android:layout_weight="1"
+             android:id="@+id/cancelTaskDB"
+             android:layout_alignParentBottom="true"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:backgroundTint="@color/lightBlue"
+             android:textColor="@color/white"
+             android:layout_marginTop="@dimen/DP300"
+             android:text="CANCEL" />
+
+
+         <Button
+             android:layout_weight="1"
+             android:id="@+id/addToTaskDB"
+             android:layout_alignParentBottom="true"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:backgroundTint="@color/lightBlue"
+             android:textColor="@color/white"
+             android:layout_marginTop="@dimen/DP300"
+             android:text="ADD TASK" />
+
+     </LinearLayout>-->
+
+</RelativeLayout>

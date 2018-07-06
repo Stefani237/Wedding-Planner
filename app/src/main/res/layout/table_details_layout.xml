@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/table_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP276"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/table" />
+
+    <LinearLayout
+        android:id="@+id/table_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/DP100"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/table_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"/>
+        <TextView
+            android:id="@+id/table_belog_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belonging Group"/>
+        <TextView
+            android:id="@+id/table_num_of_guest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Num Of Guests"/>
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_above="@+id/buttons"
+        android:layout_below="@+id/table_image"
+        android:id="@+id/table_guest_list"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DP156"/>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/seat_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:text="SEATS NUMBER" />
+
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:text="OK" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

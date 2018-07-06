@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+
+    <TextView
+        android:id="@+id/newTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/darkBlue"
+        android:text="Add New Task"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/DP10"
+        android:textSize="@dimen/DP30" />
+
+    <EditText
+        android:id="@+id/nameField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
+        android:layout_marginTop="@dimen/DP66"
+        android:ems="10"
+        android:hint="Task Name"
+        android:inputType="textCapSentences|textMultiLine"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz0123456789"/>
+
+    <EditText
+        android:id="@+id/descriptionField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
+        android:layout_marginTop="@dimen/DP110"
+        android:ems="10"
+        android:hint="Task Description (optional)"
+        android:inputType="textCapSentences|textMultiLine"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz0123456789,."/>
+
+    <EditText
+        android:id="@+id/deadlineExecutionField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
+        android:layout_marginTop="@dimen/DP156"
+        android:ems="10"
+        android:hint="Deadline for execution (optional)"
+        android:inputType="textCapSentences|textMultiLine" 
+		android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz0123456789-,."/>
+
+    <EditText
+        android:id="@+id/budgetField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
+        android:layout_marginTop="@dimen/DP200"
+        android:ems="10"
+        android:hint="My budget (optional)"
+        android:digits="0123456789"
+        android:inputType="number" />
+
+
+    <TextView
+        android:id="@+id/new_task_empty_fields"
+        android:visibility="invisible"
+        android:layout_below="@+id/budgetField"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/DP20"
+        android:textColor="@color/red"
+        android:text="Please enter a task name." />
+
+    <Button
+        android:id="@+id/addToTaskDB"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightBlue"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/DP300"
+        android:text="ADD TASK" />
+
+
+   <!-- <LinearLayout
+        android:id="@+id/new_tasks_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/cancelTaskDB"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/DP300"
+            android:text="CANCEL" />
+
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/addToTaskDB"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/DP300"
+            android:text="ADD TASK" />
+
+    </LinearLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <Spinner
+        android:id="@+id/supplier_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/suppliersListView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/DP16"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/supplier_sort"
+        android:layout_above="@+id/addSupplier"/>
+
+
+    <Button
+        android:id="@+id/addSupplier"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightBlue"
+        android:textColor="@color/white"
+        android:text="ADD NEW SUPPLIER">
+    </Button>
+
+</RelativeLayout>

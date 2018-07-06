@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView
+        android:id="@+id/sms_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="This is msg : "/>-->
+
+    <Spinner
+        android:id="@+id/list_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/list_filter"
+        android:layout_above="@+id/bottom_btns"
+        android:id="@+id/guestsListView"
+        android:layout_marginTop="@dimen/DP16"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP400" />
+
+    <LinearLayout
+        android:weightSum="2"
+        android:id="@+id/bottom_btns"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:textSize="@dimen/DP16"
+            android:id="@+id/send_sms_btn"
+            android:layout_alignParentBottom="true"
+            android:text="Send SMS"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/addGuest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD NEW GUEST"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/DP16" />
+        </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/DP70"
+        android:layout_height="@dimen/DP70"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/frame_1" />
+
+
+</RelativeLayout>

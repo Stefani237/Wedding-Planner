@@ -1,127 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:clickable="true"
     android:background="#ffffff"
     tools:context="com.example.stefani.weddingplanner.MainActivity">
 
-    <TextView
-        android:id="@+id/main_wedding_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/wedding_details" />
 
-
-    <LinearLayout
-        android:id="@+id/menu_btn"
-        android:layout_alignParentBottom="true"
+    <FrameLayout
+        android:id="@+id/contentFrame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:weightSum="2">
+        android:layout_height="match_parent"/>
 
-        <LinearLayout
-            android:id="@+id/row1_btn"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-
-            <Button
-                android:id="@+id/tasks_btn"
-                android:layout_width="75dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/lightBlue"
-                android:textColor="@color/white"
-                android:text="TASKS"
-                android:layout_gravity="center_vertical"
-                tools:layout_editor_absoluteX="239dp"
-                tools:layout_editor_absoluteY="405dp" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="75dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/menu" />
-
-            <Button
-                android:id="@+id/guests_btn"
-                android:layout_width="75dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/lightBlue"
-                android:textColor="@color/white"
-                android:text="GUESTS \nLIST"
-                android:layout_gravity="center_vertical"
-                tools:layout_editor_absoluteX="239dp"
-                tools:layout_editor_absoluteY="405dp" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/row2_btn"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <Button
-                android:id="@+id/suppliers_btn"
-                android:layout_width="75dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/lightBlue"
-                android:textColor="@color/white"
-                android:text="SUPPLIERS"
-                android:layout_gravity="center_vertical"
-                tools:layout_editor_absoluteX="239dp"
-                tools:layout_editor_absoluteY="405dp" />
-
-            <Button
-                android:id="@+id/seating_btn"
-                android:layout_width="75dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/lightBlue"
-                android:textColor="@color/white"
-                android:text="SEATING \nARRANGMENT"
-                android:layout_gravity="center_vertical"
-                tools:layout_editor_absoluteX="239dp"
-                tools:layout_editor_absoluteY="405dp" />
-
-            <Button
-                android:id="@+id/rsvps_btn"
-                android:layout_width="75dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/lightBlue"
-                android:textColor="@color/white"
-                android:text="RSVPs"
-                android:layout_gravity="center_vertical"
-                tools:layout_editor_absoluteX="239dp"
-                tools:layout_editor_absoluteY="405dp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/headline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/main_wedding_details"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="74dp"
-        android:text="TextView"
-        android:textSize="30dp" />
-
-</RelativeLayout>
+  </RelativeLayout>

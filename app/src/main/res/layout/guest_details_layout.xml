@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/guest_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/darkBlue"
+        android:text="Guest Details"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/DP10"
+        android:textSize="@dimen/DP30" />
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/DP10"
+            android:layout_marginLeft="@dimen/DP10"
+            android:layout_marginTop="@dimen/DP66">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="Name:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:enabled="false"
+                    android:layout_weight="1"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                    android:inputType="textCapWords"
+                    android:backgroundTint="@color/darkBlue"
+                    android:id="@+id/guest_details_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="Phone:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:enabled="false"
+                    android:layout_weight="1"
+                    android:inputType="phone"
+                    android:digits="0123456789"
+					android:maxLength="10"
+                    android:backgroundTint="@color/darkBlue"
+                    android:id="@+id/guest_details_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DP10"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="Coming:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioGroup
+                    android:id="@+id/radio_group_coming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/DP30"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <RadioButton
+                        android:id="@+id/radio_btn_coming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:buttonTint="@color/darkBlue"
+                        android:text="Coming" />
+                    <RadioButton
+                        android:id="@+id/radio_btn_not_coming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:buttonTint="@color/darkBlue"
+                        android:text="Not Coming" />
+
+                </RadioGroup>
+
+                <!--    <EditText
+                        android:enabled="false"
+                      android:layout_weight="1"
+                        android:backgroundTint="@color/darkBlue"
+                        android:id="@+id/guest_details_is_coming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="Number Of Guests:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:enabled="false"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:digits="0123456789"
+					android:maxLength="1"
+                    android:backgroundTint="@color/darkBlue"
+                    android:id="@+id/guest_details_number_of_guest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/DP10"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="Side:"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="wrap_content" />
+                <RadioGroup
+                    android:id="@+id/radio_group_side"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/DP30"
+                    android:weightSum="2"
+                    android:hint="Which Side">
+                    <RadioButton
+                        android:id="@+id/radio_btn_bride"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@color/darkBlue"
+                        android:text="Bride"/>
+                    <RadioButton
+                        android:id="@+id/radio_btn_groom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:buttonTint="@color/darkBlue"
+                        android:text="Groom" />
+                </RadioGroup>
+
+                <!--<EditText
+                    android:enabled="false"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/darkBlue"
+                    android:id="@+id/guest_details_side"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />-->
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/DP10"
+            android:orientation="horizontal">
+            <TextView
+                android:text="Belonging Group:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/belongGroupField"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Belonging Group"/>
+            <!--<EditText
+                android:enabled="false"
+                android:layout_weight="1"
+                android:backgroundTint="@color/darkBlue"
+                android:id="@+id/guest_details_belonging_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />-->
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/guest_details_empty_fields"
+        android:visibility="invisible"
+        android:layout_below="@+id/layout"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/DP20"
+        android:textColor="@color/red"
+        android:text="All fields must be filled in." />
+
+    <TextView
+        android:id="@+id/exist_guest"
+        android:visibility="invisible"
+        android:layout_below="@+id/layout"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/DP20"
+        android:textColor="@color/red"
+        android:text="Guest is already on list." />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/guest_details_save_data"
+            android:textAllCaps="false"
+            android:text="Save"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_alignParentBottom="true"
+            android:id="@+id/guest_details_edit"
+            android:textAllCaps="false"
+            android:text="Edit Guest"
+            android:layout_weight="1"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

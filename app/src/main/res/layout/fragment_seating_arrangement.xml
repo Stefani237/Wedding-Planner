@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:weightSum="4"
+        android:id="@+id/menu"
+        android:layout_marginTop="@dimen/DP10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP40"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:layout_weight="1"
+            android:id="@+id/max_seat"
+            android:layout_marginTop="@dimen/DP5"
+            android:layout_width="@dimen/DP10"
+            android:layout_height="@dimen/DP30" />
+        <Button
+            android:id="@+id/startSeatingArrangement"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:layout_weight="2"
+            android:text="start seating arrangement" />
+
+        <ImageButton
+            android:layout_width="@dimen/DP10"
+            android:layout_height="@dimen/DP30"
+            android:layout_marginTop="@dimen/DP5"
+            android:layout_weight="1"
+            android:id="@+id/info_btn"
+            android:background="@drawable/info" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DP550"
+        android:layout_below="@+id/menu"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_1"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="1"
+                    android:text="1" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_2"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="2"
+                    android:text="2" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_3"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="3"
+                    android:text="3" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_4"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="4"
+                    android:text="4" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_5"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="5"
+                    android:text="5" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_6"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="6"
+                    android:text="6" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_7"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="7"
+                    android:text="7" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_8"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="8"
+                    android:text="8" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_9"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="9"
+                    android:text="9" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_10"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="10"
+                    android:text="10" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_11"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="11"
+                    android:text="11" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_12"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="12"
+                    android:text="12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_13"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="13"
+                    android:text="13" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_14"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="14"
+                    android:text="14" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_15"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="15"
+                    android:text="15" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_16"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="16"
+                    android:text="16" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_17"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="17"
+                    android:text="17" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_18"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="18"
+                    android:text="18" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_19"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="19"
+                    android:text="19" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_20"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="20"
+                    android:text="20" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_21"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="21"
+                    android:text="21" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_22"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="22"
+                    android:text="22" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_23"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="23"
+                    android:text="23" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_24"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="24"
+                    android:text="24" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_25"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="25"
+                    android:text="25" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_26"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="26"
+                    android:text="26" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_27"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="27"
+                    android:text="27" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_28"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="28"
+                    android:text="28" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_29"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="29"
+                    android:text="29" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_30"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="30"
+                    android:text="30" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_31"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="31"
+                    android:text="31" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_32"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="32"
+                    android:text="32" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_33"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="33"
+                    android:text="33" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_34"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="34"
+                    android:text="34" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_35"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="35"
+                    android:text="35" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_36"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="36"
+                    android:text="36" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_37"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="37"
+                    android:text="37" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_38"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="38"
+                    android:text="38" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_39"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="39"
+                    android:text="39" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_40"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="40"
+                    android:text="40" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_41"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="41"
+                    android:text="41" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_42"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="42"
+                    android:text="42" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_43"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="43"
+                    android:text="43" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_44"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="44"
+                    android:text="44" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_45"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="45"
+                    android:text="45" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_46"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="46"
+                    android:text="46" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_47"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="47"
+                    android:text="47" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_48"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="48"
+                    android:text="48" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_49"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="49"
+                    android:text="49" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_50"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="50"
+                    android:text="50" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_51"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="51"
+                    android:text="51" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DP5"
+                android:layout_marginRight="@dimen/DP5"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/table_52"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="52"
+                    android:text="52" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_53"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="53"
+                    android:text="53" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_54"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="54"
+                    android:text="54" />
+
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_55"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="55"
+                    android:text="55" />
+                <Button
+                    android:layout_width="@dimen/DP26"
+                    android:layout_height="@dimen/DP50"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/table_56"
+                    android:layout_width="@dimen/DP50"
+                    android:layout_height="@dimen/DP50"
+                    android:onClick="showTableDetails"
+                    android:tag="56"
+                    android:text="56" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/DP70"
+        android:layout_height="@dimen/DP70"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/frame_1" />
+
+</RelativeLayout>

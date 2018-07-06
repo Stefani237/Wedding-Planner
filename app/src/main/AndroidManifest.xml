@@ -6,6 +6,10 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <uses-feature
         android:name="android.hardware.telephony"
@@ -14,8 +18,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".WeddingPlanner"
-        android:allowBackup="true"
+        android:name=".WeddingPlannerApp"
+
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -24,23 +28,14 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GuestsListActivity" />
-        <activity android:name=".NewGuestActivity" />
-        <activity android:name=".TasksListActivity" />
 
-        <receiver
-            android:name=".SmsReceiver"
-            android:exported="true">
-            <intent-filter android:priority="2147483647">
-                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-            </intent-filter>
-        </receiver>
-
-        <activity android:name=".NewTaskActivity"></activity>
+        <!-- <activity
+             android:name=".WelcomeActivity"
+             android:label="@string/title_activity_welcome_fragment"
+             android:theme="@style/AppTheme"></activity>-->
     </application>
 
 </manifest>

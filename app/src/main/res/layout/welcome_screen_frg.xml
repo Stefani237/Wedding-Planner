@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@drawable/wed"
+    android:id="@+id/welcome_fragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+     <TextView
+         android:layout_alignParentStart="true"
+         android:id="@+id/main_wedding_details"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/wedding_details" />
+
+
+    <TextView
+        android:id="@+id/main_wedding_counters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="@string/wedding_status" />
+
+        <LinearLayout
+            android:id="@+id/menu_btn"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/left_btn"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/tasks_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP56"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/lightBlue"
+                    android:textColor="@color/white"
+                    android:text="TASKS"
+                    android:layout_gravity="center_vertical"/>
+
+                <Button
+                    android:id="@+id/suppliers_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP56"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/lightBlue"
+                    android:textColor="@color/white"
+                    android:text="SUPPLIERS"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/right_btn"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/guests_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP56"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/lightBlue"
+                    android:textColor="@color/white"
+                    android:text="GUESTS \nLIST"
+                    android:layout_gravity="center_vertical" />
+
+                <Button
+                    android:id="@+id/seating_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/DP56"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/lightBlue"
+                    android:textColor="@color/white"
+                    android:text="SEATING \nARRANGMENT"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_wedding_details"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/DP66"
+            android:text="@string/str_congratulations"
+            android:textStyle="bold"
+            android:textSize="@dimen/DP40" />
+
+
+        <!--<ImageView
+           android:id="@+id/imageView"
+           android:layout_width="@dimen/DP100"
+           android:layout_height="@dimen/DP40"
+           android:layout_below="@+id/headline"
+           android:layout_centerHorizontal="true"
+           app:srcCompat="@drawable/menu" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="There are only"
+            android:textSize="@dimen/DP20"
+            android:layout_marginTop="@dimen/DP150"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_gravity="center"
+            android:id="@+id/textView1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/relativeLayout">
+
+            <LinearLayout
+                android:id="@+id/LinearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/LinearLayout2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/time_counter_background"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/txtTimerDay"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="@dimen/DP36"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txt_TimerDay"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="Days"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/lightBlue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/LinearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/time_counter_background"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/txtTimerHour"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="@dimen/DP36"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txt_TimerHour"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="Hours"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/lightBlue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/LinearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/time_counter_background"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/txtTimerMinute"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="@dimen/DP36"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txt_TimerMinute"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="Minutes"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/lightBlue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/LinearLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/time_counter_background"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/txtTimerSecond"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/darkBlue"
+                        android:textSize="@dimen/DP36"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txt_TimerSecond"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:text="Seconds"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/lightBlue"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="till the wedding day!"
+            android:textSize="@dimen/DP20"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:id="@+id/textView2" />
+
+
+
+</RelativeLayout>

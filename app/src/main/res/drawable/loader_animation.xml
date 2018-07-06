@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <animation-list
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <item android:drawable="@drawable/frame_1"
+            android:duration="100"/>
+        <item android:drawable="@drawable/frame_2"
+            android:duration="100"/>
+        <item android:drawable="@drawable/frame_3"
+            android:duration="100"/>
+        <item android:drawable="@drawable/frame_4"
+            android:duration="100"/>
+        <item android:drawable="@drawable/frame_5"
+            android:duration="100"/>
+        <item android:drawable="@drawable/frame_6"
+            android:duration="100"/>
+
+    </animation-list>

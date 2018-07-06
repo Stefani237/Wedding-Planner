@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,19 +16,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/DP10"
             android:text="My Wedding"
             android:textAlignment="center"
-            android:textSize="30dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="16dp" />
+            android:textSize="@dimen/DP30" />
 
         <EditText
             android:id="@+id/wedding_details_groom_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/DP20"
             android:backgroundTint="@color/darkBlue"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
             android:inputType="textCapWords"
             android:ems="10"
             android:hint="Groom's Name" />
@@ -37,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/darkBlue"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
             android:inputType="textCapWords"
             android:ems="10"
             android:hint="Bride's Name" />
@@ -48,42 +49,49 @@
             android:backgroundTint="@color/darkBlue"
             android:ems="10"
             android:hint="Wedding Hall"
-            android:inputType="textCapWords"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="193dp" />
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz0123456789-"
+            android:inputType="textCapWords" />
 
-        <EditText
+       <EditText
             android:id="@+id/wedding_details_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/darkBlue"
             android:ems="10"
             android:hint="Address"
-            android:inputType="textCapWords"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="264dp" />
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz0123456789-,"
+            android:inputType="textCapWords" />
+
 
         <EditText
+            android:focusable="false"
             android:id="@+id/wedding_details_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/darkBlue"
             android:ems="10"
             android:hint="Date"
-            android:inputType="date"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="342dp" />
+             />
 
         <EditText
+            android:focusable="false"
             android:id="@+id/wedding_details_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/darkBlue"
             android:ems="10"
             android:hint="Time"
-            android:inputType="time"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="342dp" />
+             />
+
+        <TextView
+            android:id="@+id/new_task_empty_fields"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/DP20"
+            android:textColor="@color/red"
+            android:text="All fields must be filled in." />
 
     </LinearLayout>
 
@@ -112,7 +120,6 @@
             android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
     </LinearLayout>
 
 </RelativeLayout>

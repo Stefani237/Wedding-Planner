@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:padding="@dimen/DP10">
+
+
+    <TextView
+        android:text="Supplier name"
+        android:layout_weight="2"
+        android:id="@+id/sup_list_name"
+        android:textSize="@dimen/DP20"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:layout_width="@dimen/DP300"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:text="Price"
+        android:id="@+id/sup_list_price"
+        android:layout_below="@+id/sup_list_name"
+        android:textSize="@dimen/DP16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

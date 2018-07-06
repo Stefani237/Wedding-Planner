@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+
+    <TextView
+        android:id="@+id/newGuest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Add New Guest"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/DP10"
+        android:textSize="@dimen/DP30" />
+
+    <EditText
+        android:id="@+id/fullNameField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
+        android:layout_marginTop="@dimen/DP66"
+        android:ems="10"
+        android:hint="Full Name"
+		android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+        android:inputType="textCapWords" />
+
+    <EditText
+        android:id="@+id/phoneNumberField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
+        android:layout_marginTop="@dimen/DP110"
+        android:ems="10"
+        android:digits="0123456789"
+		android:maxLength="10"
+        android:hint="Phone Number"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/NumOfInvitedField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
+        android:layout_marginTop="@dimen/DP156"
+        android:digits="123456789"
+		android:maxLength="1"
+        android:ems="10"
+        android:hint="Number Of Invited"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/sideText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DP210"
+        android:layout_marginLeft="@dimen/DP10"
+        android:text="Select from which side:"
+        android:textSize="@dimen/DP16" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DP230"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/DP10"
+        android:layout_marginRight="@dimen/DP10"
+        android:weightSum="2"
+        android:hint="Which Side">
+
+        <RadioButton
+            android:id="@+id/radio_btn_bride"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:buttonTint="@color/darkBlue"
+            android:text="Bride"/>
+        <!--android:onClick="getSelectedRadioButton"-->
+
+
+        <RadioButton
+            android:id="@+id/radio_btn_groom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:buttonTint="@color/darkBlue"
+            android:text="Groom" />
+    <!--android:onClick="getSelectedRadioButton"-->
+
+
+</RadioGroup>
+
+
+<LinearLayout
+    android:id="@+id/group_spinner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/DP276"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/belongGroupText"
+        android:layout_weight="2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/DP70"
+        android:layout_marginLeft="@dimen/DP10"
+        android:text="Select a belonging group:"
+        android:textSize="@dimen/DP16" />
+
+    <Spinner
+        android:id="@+id/belongGroupFieldNewGuest"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Belonging Group"/>
+</LinearLayout>
+
+<TextView
+    android:id="@+id/new_task_empty_fields"
+    android:visibility="invisible"
+    android:layout_below="@+id/group_spinner"
+    android:layout_centerHorizontal="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/DP20"
+    android:textColor="@color/red"
+    android:text="All fields must be filled in." />
+
+    <TextView
+        android:id="@+id/exist_guest"
+        android:visibility="invisible"
+        android:layout_below="@+id/group_spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/DP20"
+        android:textColor="@color/red"
+        android:text="Guest is already on list." />
+
+<LinearLayout
+    android:id="@+id/new_guest_btn"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/addFromContacts"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightBlue"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/DP300"
+        android:text="ADD CONTACT" />
+
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/addToGuestDB"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightBlue"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/DP300"
+        android:text="OK" />
+
+</LinearLayout>
+
+
+</RelativeLayout>

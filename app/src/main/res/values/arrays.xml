@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="belong_group_arr">
+        <item>Friends</item>
+        <item>Family</item>
+        <item>Friends of the parents</item>
+    </string-array>
+
+    <string-array name="task_sort_arr">
+        <item>All tasks</item>
+        <item>Completed tasks</item>
+        <item>Uncompleted tasks</item>
+    </string-array>
+
+    <string-array name="guest_sort_arr">
+        <item>All guests</item>
+        <item>Guests arriving</item>
+        <item>Guests not arriving</item>
+    </string-array>
+
+    <string-array name="supplier_sort_arr">
+        <item>All supplier</item>
+        <item>Paid</item>
+        <item>Not paid</item>
+    </string-array>
+
+    <string-array name="max_seat_all_tables">
+        <item>\n\nSet max seat for all tables</item>
+        <item>10</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="max_seat">
+        <item>10</item>
+        <item>12</item>
+        <item>24</item>
+    </string-array>
+
+
+
+</resources>

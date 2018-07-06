@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:layout_marginTop="@dimen/DP150">
+
+    <LinearLayout
+        android:id="@+id/select_seats_num_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DP66"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/darkBlue"
+        android:textSize="@dimen/DP20"
+        android:layout_toEndOf="@+id/select_seats_num_layout"
+        android:text="Select number of seats:" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toEndOf="@+id/select_seats_num_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seat_btn"
+        android:layout_below="@+id/select_seats_num_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:text="CANCEL" />
+
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightBlue"
+            android:textColor="@color/white"
+            android:text="OK" />
+
+    </LinearLayout>
+
+</RelativeLayout>

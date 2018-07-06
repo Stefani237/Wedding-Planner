@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "867791994524",
-    "firebase_url": "https://weddingplanner-61cad.firebaseio.com",
-    "project_id": "weddingplanner-61cad",
-    "storage_bucket": "weddingplanner-61cad.appspot.com"
+    "project_number": "106367132663",
+    "firebase_url": "https://weddingplanner-af2f9.firebaseio.com",
+    "project_id": "weddingplanner-af2f9",
+    "storage_bucket": "weddingplanner-af2f9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:867791994524:android:d1a7d6a7786e0db6",
+        "mobilesdk_app_id": "1:106367132663:android:d1a7d6a7786e0db6",
         "android_client_info": {
           "package_name": "com.example.stefani.weddingplanner"
         }
       },
       "oauth_client": [
         {
-          "client_id": "867791994524-rsab8sn0b1s84m1ts97d110uru89v3ak.apps.googleusercontent.com",
+          "client_id": "106367132663-815so6eu6f7mbohq01udr76i40a01779.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.stefani.weddingplanner",
-            "certificate_hash": "48714ad975d1bd97f291e1d463e17e3f9a0e7bfb"
+            "certificate_hash": "f3b8220bf0707cf08ddc1795781b5cbbfd7c69b6"
           }
         },
         {
-          "client_id": "867791994524-q8ktkuqshga4tc6t6b29lkn4eil8rmqb.apps.googleusercontent.com",
+          "client_id": "106367132663-f3clgelpv0vmuhf2qcci4op2h5ivjb2q.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAEqofxuyOQ9MwPmgg1x9gzAgi4FhAOFaQ"
+          "current_key": "AIzaSyBFg9nckYoJPxmYbQPJW8wPlXN8MHNLqq0"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "867791994524-q8ktkuqshga4tc6t6b29lkn4eil8rmqb.apps.googleusercontent.com",
+              "client_id": "106367132663-f3clgelpv0vmuhf2qcci4op2h5ivjb2q.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
